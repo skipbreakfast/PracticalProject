@@ -60,8 +60,10 @@ public class BookInfoDaoImpl extends BaseDao implements BookInfoDao {
     @Override
     public int deleteBookInfoByName(String name) {
         // TODO: 2021/4/24 林凯斌
-        System.out.println("功能开发中...");
-        return 0;
+       String sql = "DELETE FROM book_ info WHERE book_ info. name = ?";
+       return new BaseDao( ) .update(sq1, name ) ;
+	    print("222")
+            print("222")
     }
 
     /**
