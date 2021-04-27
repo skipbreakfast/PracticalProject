@@ -47,7 +47,7 @@ public class BookInfoDaoImpl extends BaseDao implements BookInfoDao {
     @Override
     public int addBookInfo(String name, String author, String publish) {
         // TODO: 2021/4/24 安泽铭
-        System.out.println("功能开发中...");
+        String sql = "insert into book_info(name,author,publish) values(?,?,?)";
         return 0;
     }
 
