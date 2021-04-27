@@ -20,8 +20,10 @@ public class BookInfoDaoImpl extends BaseDao implements BookInfoDao {
     @Override
     public int countBookInfo() {
         // TODO: 2021/4/24 吕洽闻
-        System.out.println("功能开发中...");
-		return 0;
+//        System.out.println("功能开发中...");
+        String sql = "SELECT COUNT(1) FROM book_info";
+        BaseDao dao = new BaseDao();
+        return dao.querySingleValue(sql);
     }
 
     /**
@@ -32,8 +34,9 @@ public class BookInfoDaoImpl extends BaseDao implements BookInfoDao {
     @Override
     public List<BookInfo> queryBookDao() {
         // TODO: 2021/4/24 鄢宇航
-        System.out.println("功能开发中...");
-		return null;
+//        System.out.println("功能开发中...");
+        String sql = "SELECT * FROM book_info";
+        return new BaseDao().query(BookInfo.class,sql);
     }
 
     /**
