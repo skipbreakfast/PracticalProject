@@ -62,6 +62,8 @@ public class BookInfoDaoImpl extends BaseDao implements BookInfoDao {
         // TODO: 2021/4/24 林凯斌
        String sql = "DELETE FROM book_ info WHERE book_ info. name = ?";
        return new BaseDao( ) .update(sq1, name ) ;
+	    print("222")
+            print("222")
     }
 
     /**
