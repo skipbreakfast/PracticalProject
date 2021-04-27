@@ -48,7 +48,7 @@ public class BookInfoDaoImpl extends BaseDao implements BookInfoDao {
     public int addBookInfo(String name, String author, String publish) {
         // TODO: 2021/4/24 安泽铭
         String sql = "insert into book_info(name,author,publish) values(?,?,?)";
-        return 0;
+        return new BaseDao().update(sql,name,author,publish);
     }
 
     /**
