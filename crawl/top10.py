@@ -72,7 +72,7 @@ def insertIntodataBase(infoList):
     #创建新表
     sql = "create table if not exists `bookInfo`(`name` varchar(200) not null ,`author` varchar(200) not null ,`parameter` varchar(200) not null)ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0"
     cursor.execute(sql)
-    sqlInsert = "insert into bookInfo values (%s,%s,%s)"
+    sqlInsert = "insert into book_info(`name`,`author`,`parameter`) values (%s,%s,%s)"
     insert = cursor.executemany(sqlInsert,infoList)
     print("受影响的行数为：",insert)
     cursor.close()
@@ -87,8 +87,6 @@ def main():
     html_list = getWids(goodsHtml)
     infoList = getInfo(html_list)
     insertIntodataBase(infoList)
-
-
 
 
 main()
